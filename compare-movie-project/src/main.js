@@ -1,6 +1,9 @@
 import './style.css';
 import { getEl } from './mods/utils';
-// import { findMatchingMovie, movieData } from './movie-data.json';
+import movieData from '../movie-data.json';
+
+const variable = 45;
+
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -56,6 +59,8 @@ const main = () => {
   getEl('#movie-input').addEventListener('submit', handleSubmit);
   document.getElementById('reset').addEventListener('click', resetLocalStorage);
   console.log(getValue('form-data'));
+  // console.log(variable)
 };
 
+console.log(variable)
 main();
