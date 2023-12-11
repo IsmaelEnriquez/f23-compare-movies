@@ -1,8 +1,6 @@
 import './style.css';
 import { getEl } from './mods/utils';
-import movieData from '../movie-data.json';
-
-const variable = 45;
+import movieData from './movie-data.json'
 
 
 const handleSubmit = (e) => {
@@ -10,10 +8,6 @@ const handleSubmit = (e) => {
   const formObj = Object.fromEntries(new FormData(e.target));
   console.log(formObj);
   addValue(formObj);
-
-  const matchingMovie = findMatchingMovie(formObj.movieTitle, movieData);
-  if (matchingMovie) {
-    console.log(matchingMovie);
 
     const form = e.target;
     const movieTitleInput = form.movieTitle.value;
@@ -27,7 +21,6 @@ const handleSubmit = (e) => {
     document.querySelector('#audience-score-results').textContent = audienceScoreInput;
     document.querySelector('#domestic-total-results').textContent = domesticGrossInput;
     document.querySelector('#genre-results').textContent = genreInput;
-  }
 };
 
 const setLocalStorageKey = (key, value) => {
@@ -59,8 +52,7 @@ const main = () => {
   getEl('#movie-input').addEventListener('submit', handleSubmit);
   document.getElementById('reset').addEventListener('click', resetLocalStorage);
   console.log(getValue('form-data'));
-  // console.log(variable)
+  console.log(movieData);
 };
 
-console.log(variable)
 main();
