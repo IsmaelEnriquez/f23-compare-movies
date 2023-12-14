@@ -8,50 +8,56 @@
     <script defer type="module" src="./src/main.js"></script>
   </head>
   <body>
-    <h1>2023's Top Domestic Movies</h1>
-    <div id="app">
-        <form id="movie-input" action="movie" aria-labelledby="form heading">
-          <h2 id="heading">Add Your Movie</h2>
-          <div id="first">
-            <label for="movieTitle">Movie Title: </label>
-            <input id ="movieTitle" type="text" name="movieTitle">
+    <main>
+      <h1>2023's Top Domestic Movies</h1>
+      <div id="app">
+          <form id="movie-input" action="movie" aria-labelledby="form heading">
+            <h2 id="heading">Add Your Movie</h2>
+            <div id="first">
+              <label for="movieTitle">Movie Title: </label>
+              <input id ="movieTitle" type="text" name="movieTitle">
+            </div>
+            <div id="second">
+              <label for="criticScore">Critic Score: </label>
+              <input id="criticScore" type="number" name="critic-score">
+            </div>
+            <div id="third">
+              <label for="audienceScore">Audience Score: </label>
+              <input id="audienceScore" type="number" name="audience-score">
+            </div>
+            <div id="fourth">
+              <label for="domesticGross">Domestic Gross Sales: </label>
+              <input id="domesticGross" type="number" name="domestic-gross">
+            </div>
+            <div id="final">
+              <label for="genre">Genre: </label>
+              <select name="genre" id="genre">
+                <option value="" disabled selected>Select a genre</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="concert">Concert</option>
+                <option value="drama">Drama</option>
+                <option value="Documentary">Documentary</option>
+                <option value="horror">Horror</option>
+                <option value="musicals">Musicals</option>
+                <option value="romance">Romance</option>
+                <option value="sci-fi">Sci-fi</option>
+                <option value="thriller">Thriller</option>
+              </select>
+            </div>
+            <button id="add-movie-button">Add Movie</button>
+          </form>
+  
+          <div id="movie-container">
+            <div id="movies">
+            </div>
           </div>
-          <div id="second">
-            <label for="criticScore">Critic Score: </label>
-            <input id="criticScore" type="text" name="critic-score">
-          </div>
-          <div id="third">
-            <label for="audienceScore">Audience Score: </label>
-            <input id="audienceScore" type="text" name="audience-score">
-          </div>
-          <div id="fourth">
-            <label for="domesticGross">Domestic Gross Sales: </label>
-            <input id="domesticGross" type="text" name="domestic-gross">
-          </div>
-          <div id="final">
-            <label for="genre">Genre: </label>
-            <select name="genre" id="genre">
-              <option value="" disabled selected>Select a genre</option>
-              <option value="action">Action</option>
-              <option value="adventure">Adventure</option>
-              <option value="comedy">Comedy</option>
-              <option value="concert">Concert</option>
-              <option value="drama">Drama</option>
-              <option value="Documentary">Documentary</option>
-              <option value="horror">Horror</option>
-              <option value="musicals">Musicals</option>
-              <option value="romance">Romance</option>
-              <option value="sci-fi">Sci-fi</option>
-              <option value="thriller">Thriller</option>
-            </select>
-          </div>
-          <button>Add Movie</button>
-        </form>
-    <div>
-    <div id="movie-container">
-      <div id="movies">
-      </div>
+      <div>
+    </main>
+    <div id="reset-container">
+      <button id="reset">Go Back to Default Movies</button>
+      <div id="chartContainer"></div>
     </div>
-    <button id="reset">Go Back to Default Movies</button>
   </body>
 </html>

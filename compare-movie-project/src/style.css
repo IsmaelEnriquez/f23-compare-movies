@@ -23,6 +23,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 #app {
   display: flex;
   align-items: center;
@@ -30,8 +31,40 @@ body {
   justify-content: space-around;
 }
 
+#movie-input {
+  border: 5px solid black;
+  padding: 1rem;
+}
+
+#add-movie-button {
+  margin-left: 7rem;
+  margin-top: 1rem;
+  padding: 3px;
+}
+
 #movie-container {
   background-color: black;
   border: 1px solid white;
   justify-content: space-between;
+  max-width: 800px;
+  max-height: 400px; 
+  overflow-x: auto; 
+  overflow-y: auto; 
+}
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-entry {
+  border: 1px solid blue;
+  flex: 1 0 200px;
+  margin: 5px;
+  padding: 10px;
+}
+
+#reset-container {
+  margin-bottom: 100rem;
+  text-align: center;
 }
