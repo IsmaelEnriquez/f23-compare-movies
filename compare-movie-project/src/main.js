@@ -51,7 +51,7 @@ const displayOneMovie = (movie) => {
     const movieDiv = document.createElement('div');
     movieDiv.classList.add('movie-entry');
 
-    const titleHeading = document.createElement('h2');
+    const titleHeading = document.createElement('h3');
     titleHeading.textContent = movie.title;
 
     const criticScoreParagraph = document.createElement('p');
@@ -83,7 +83,7 @@ const renderDefaultMovies = () => {
     const movieDiv = document.createElement('div');
     movieDiv.classList.add('movie-entry');
 
-    const titleHeading = document.createElement('h2');
+    const titleHeading = document.createElement('h3');
     titleHeading.textContent = movie.title;
 
     const criticScoreParagraph = document.createElement('p');
